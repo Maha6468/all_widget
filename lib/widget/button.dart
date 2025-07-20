@@ -43,6 +43,23 @@ class Button_T extends StatelessWidget {
                 child:Text('like'),
               ),
             ),
+            SizedBox(height: 20,),
+            
+            SizedBox(
+              height: 40,width: 100,
+              child: OutlinedButton(onPressed: (){
+              
+              }, child: Text('OLB'),
+              style: OutlinedButton.styleFrom(
+                backgroundColor: Colors.limeAccent,
+                foregroundColor: Colors.pink,
+                elevation: 5,
+                shape:RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(40)
+                )
+              ),
+              ),
+            )
           ],
         ),
       ),
