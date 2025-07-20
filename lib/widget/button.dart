@@ -11,24 +11,24 @@ class Button_T extends StatelessWidget {
           //crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(onPressed: (){
+            ElevatedButton(onPressed: () {
               print('1st button');
             },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.cyan,
-              foregroundColor: Colors.amberAccent,
-              elevation: .1,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20)
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.cyan,
+                  foregroundColor: Colors.amberAccent,
+                  elevation: .1,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
+                  ),
+                  shadowColor: Colors.amberAccent
               ),
-              shadowColor: Colors.amberAccent
-            ),
-              child:Text('Menu'),
+              child: Text('Menu'),
             ),
             SizedBox(height: 10,),
             SizedBox(
-              height: 100,width: 300,
-              child: ElevatedButton(onPressed: (){
+              height: 100, width: 300,
+              child: ElevatedButton(onPressed: () {
                 print('1st button');
               },
                 style: ElevatedButton.styleFrom(
@@ -40,26 +40,33 @@ class Button_T extends StatelessWidget {
                     ),
                     shadowColor: Colors.amberAccent
                 ),
-                child:Text('like'),
+                child: Text('like'),
               ),
             ),
-            SizedBox(height: 20,),
-            
+            SizedBox(height: 10,),
+
             SizedBox(
-              height: 40,width: 100,
-              child: OutlinedButton(onPressed: (){
-              
+              height: 40, width: 100,
+              child: OutlinedButton(onPressed: () {
+
               }, child: Text('OLB'),
-              style: OutlinedButton.styleFrom(
-                backgroundColor: Colors.limeAccent,
-                foregroundColor: Colors.pink,
-                elevation: 5,
-                shape:RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(40)
-                )
+                style: OutlinedButton.styleFrom(
+                    backgroundColor: Colors.limeAccent,
+                    foregroundColor: Colors.pink,
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40)
+                    )
+                ),
               ),
-              ),
-            )
+            ),
+            SizedBox(height: 10,),
+
+            TextButton(onPressed: (){
+
+            }, child:Text('Click me')),
+
+
           ],
         ),
       ),
