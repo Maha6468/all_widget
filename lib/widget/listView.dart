@@ -13,18 +13,28 @@ class _ListView_LTState extends State<ListView_LT> {
     return Scaffold(
         body: ListView(
           children: [
-            ListTile(
-              title: Text('Item 1'),
-              textColor: Colors.pink,
-              trailing: Icon(Icons.arrow_forward),
-              leading:Container(
-                height: 30,width: 30,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.lightBlue,
-                ),
-              ),
+            Card(
+              //color: Colors.blueGrey,
+              shadowColor: Colors.purpleAccent,
+              elevation:2,
+              shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(20)),
 
+              child: ListTile(
+                title: Text('Item 1'),
+                subtitle: Text('maha'),
+               // textColor: Colors.pink,
+                trailing: Icon(Icons.arrow_forward),
+                leading:Container(
+                  height: 30,width: 30,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.lightBlue,
+                  ),
+                ),
+               // selected: true,
+               // selectedColor: Colors.yellow,
+                selectedTileColor: Colors.indigo,
+              ),
             )
           ],
         )
