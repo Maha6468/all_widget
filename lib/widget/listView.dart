@@ -10,34 +10,23 @@ class Listview_Builder extends StatefulWidget {
 class _Listview_BuilderState extends State<Listview_Builder> {
   @override
   Widget build(BuildContext context) {
+    var arrNames=["Maha",'Saimmia','Rickta',"Swadhin","Mahabubar","Naim"];
+
     return Scaffold(
       appBar: AppBar(
         title: Text("ListView Builder"),
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
-      body: ListView(
-        scrollDirection: Axis.horizontal,
-       // scrollDirection: Axis.vertical,
-        reverse: true,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text('I am maha 1'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text('I am maha 2'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text('I am maha 3'),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text('I am maha 4'),
-          ),
-        ],
+      body: ListView.builder(itemBuilder:(context, index){
+        return Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(arrNames[index],style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
+        );
+      },
+        itemCount: arrNames.length,
+        //scrollDirection: Axis.horizontal,
+        itemExtent: 100,
       ),
     );
   }
