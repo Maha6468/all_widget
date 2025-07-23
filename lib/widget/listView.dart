@@ -10,7 +10,7 @@ class Listview_Builder extends StatefulWidget {
 class _Listview_BuilderState extends State<Listview_Builder> {
   @override
   Widget build(BuildContext context) {
-    var arrNames=["Maha",'Saimmia','Rickta',"Swadhin","Mahabubar","Naim"];
+    var arrNames=["Maha",'Saimmia','Rickta',"Swadhin","mahabubar","Naim"];
 
     return Scaffold(
       appBar: AppBar(
@@ -18,15 +18,13 @@ class _Listview_BuilderState extends State<Listview_Builder> {
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
-      body: ListView.separated(itemBuilder:(context, index){
-        return Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(arrNames[index],style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
-        );
-      },
+      body: ListView.separated(
         itemCount: arrNames.length,
-        separatorBuilder: (BuildContext context, int index) { return Divider(height: 30,); },
-        //scrollDirection: Axis.horizontal,
+        separatorBuilder: (BuildContext context, int index) { return Divider(height: 30,);},
+        itemBuilder:(context, index) {
+          return Text(arrNames[index],
+            style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),);
+        },
 
       ),
     );
