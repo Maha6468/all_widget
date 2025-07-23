@@ -18,15 +18,16 @@ class _Listview_BuilderState extends State<Listview_Builder> {
         backgroundColor: Colors.blue,
         centerTitle: true,
       ),
-      body: ListView.builder(itemBuilder:(context, index){
+      body: ListView.separated(itemBuilder:(context, index){
         return Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(arrNames[index],style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold),),
         );
       },
         itemCount: arrNames.length,
+        separatorBuilder: (BuildContext context, int index) { return Divider(height: 30,); },
         //scrollDirection: Axis.horizontal,
-        itemExtent: 100,
+
       ),
     );
   }
