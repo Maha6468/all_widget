@@ -20,7 +20,7 @@ class _Listview_BuilderState extends State<Listview_Builder> {
       ),
       body: ListView.separated(
         itemCount: arrNames.length,
-        separatorBuilder: (BuildContext context, int index) { return Divider(height: 30,);},
+        separatorBuilder: (BuildContext context, int index) { return Divider(height: 30, thickness: 5,);},
         itemBuilder:(context, index) {
           return Text(arrNames[index],
             style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),);
